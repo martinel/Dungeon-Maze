@@ -1,0 +1,42 @@
+body{
+	background-color:#4F8A99;
+}
+
+#heroes{
+	height:400px;
+	width:1024px;
+	padding:0px;
+	background:blue;
+
+}
+
+.h{
+	height:200px;
+	width:200px;
+	float:left;
+	padding-right:130px;
+
+}
+.tabla{
+	padding-right:250px;
+	float:left;
+	color:white;
+	visibility:hidden;
+}
+/*
+.t1{
+	background-color:orange;
+	visibility:hidden;
+}
+.t2{
+	background-color:red;
+	visibility:hidden;
+}
+.t3{
+	background-color:yellow;
+	visibility:hidden;
+}*/
+.focus{
+	visibility:visible;
+}
+

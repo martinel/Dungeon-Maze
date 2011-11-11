@@ -1,0 +1,3 @@
+la habitacion tendra un unico camino hacia la llave y dentro del mismo abran espacios libres donde los enemigos se moveran y encontraran a nuestro personaje.
+
+el oro aumentara el ataque del personaje.
