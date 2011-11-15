@@ -1,0 +1,45 @@
+<html>
+
+	 <head>  
+	 <link href="estilo.css" media="screen" type="text/css" rel="stylesheet">
+	<title>Primer Nivel</title>
+	<script>
+	  var x = 0;
+	  var y = 0;
+	  function moverImagen(direccion){
+		switch(direccion.keyCode){
+		  case 38:
+			y -= 5;
+			document.getElementById("imagen").style.top = String(y)+"px";
+			break;
+		  case 39:
+			x -= 5;
+			document.getElementById("imagen").style.right = String(x)+"px";
+			break;
+		  case 40:
+			y += 5;
+			document.getElementById("imagen").style.top = String(y)+"px";
+			break;
+		  
+		  case 37:
+			x += 5;
+			document.getElementById("imagen").style.right = String(x)+"px";
+			break;
+		  
+		  default:
+			document.write(direccion.keyCode);
+			break;
+		}
+		
+	  }
+	  
+	</script>
+  </head>
+  <! body onkeyup>
+  <body onkeydown="moverImagen(event);">
+	<img src="sprite-guerrero.jpg" id="imagen" alt="guerrero" />
+  </body>
+
+</html>
+
+		
