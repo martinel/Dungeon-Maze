@@ -9,20 +9,20 @@
 	  function moverImagen(direccion){
 		switch(direccion.keyCode){
 		  case 38:
-			y -= 5;
+			y -= 25;
 			document.getElementById("imagen").style.top = String(y)+"px";
 			break;
 		  case 39:
-			x -= 5;
+			x -= 25;
 			document.getElementById("imagen").style.right = String(x)+"px";
 			break;
 		  case 40:
-			y += 5;
+			y += 25;
 			document.getElementById("imagen").style.top = String(y)+"px";
 			break;
 		  
 		  case 37:
-			x += 5;
+			x += 25;
 			document.getElementById("imagen").style.right = String(x)+"px";
 			break;
 		  
@@ -37,7 +37,13 @@
   </head>
   <! body onkeyup>
   <body onkeydown="moverImagen(event);">
+	<div id="juego">
+	<img src="fondo2.jpg" class = "fondo"/>
 	<img src="sprite-guerrero.jpg" id="imagen" alt="guerrero" />
+	</div>
+	<div id="stats">
+	
+	</div>
   </body>
 
 </html>

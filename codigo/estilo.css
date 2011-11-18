@@ -1,9 +1,26 @@
 body{
-	background-image:url("fondo2.jpg");
+	
 }
 
 #imagen{
+	
 	position:relative;
-	height:70px;
-	width:70px;
+	height:25px;
+	width:25px;
+	position:relative;
+}
+
+.fondo{
+	height: 500px;
+	width: 800px;
+	position:absolute;
+	
+}
+
+#stats{
+	top:475px;
+	width:800px;
+	height: 100px;
+	background-color:blue;
+	position:relative;
 }
