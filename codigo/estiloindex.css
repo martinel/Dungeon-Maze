@@ -1,0 +1,43 @@
+
+#container{
+width:600px;
+background-color:orange;
+border:3px;
+padding:40px;
+margin:40px auto;
+text-align:justify;
+float:left;
+
+}
+
+
+.texto > em, .texto > img
+{
+   display:none;
+} 
+
+.texto
+{
+   color:blue;
+   position:relative;
+}
+
+.texto > em, .texto > img
+{
+   display:none;
+   position:absolute;
+   top:-1em;
+   left:2em;
+   background:yellow;
+   border:1px solid black;
+   width:100px;
+}
+
+.texto:hover > em, .texto:hover > img
+{
+   display:block;
+}
+
+#reglas li{
+	list-style:none;
+}

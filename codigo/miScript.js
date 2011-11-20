@@ -1,24 +1,18 @@
 $('document').ready(function(){
-	
-	$('#guerrero').hover(function(){
-		
-		/*$('#t2').addClass('hidden');
-		$('#t3').addClass('hidden');*/
-		$('#t1').addClass('focus');
-	
+		$('#t1').hide();
+		$('#t2').hide();
+		$('#t3').hide();
+	$('#heroes img').hover(function(){
+		switch(this.id){
+			case 'guerrero':
+			$('#t1').show();
+			break;
+			case 'clerigo':
+			$('#t2').show();
+			break;
+			case 'valkiria':
+			$('#t3').show();
+			break;
+		}	
 	});
-	$('#clerigo').hover(function(){
-		/*$('#t1').addClass('hidden');
-		$('#t3').addClass('hidden');*/
-		$('#t2').addClass('focus');
-	
-	});
-	$('#valkiria').hover(function(){
-		/*$('#t2').addClass('hidden');
-		$('#t1').addClass('hidden');*/
-		$('#t3').addClass('focus');
-	
-	});
-
-
 });

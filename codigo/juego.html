@@ -1,6 +1,17 @@
 <html>
 
 	 <head>  
+	 
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="ejemplo.css" />
+
+	<script type="text/javascript" src="ejemplo.js">	
+
+
+	</script>
+
+		
 	 <link href="estilo.css" media="screen" type="text/css" rel="stylesheet">
 	<title>Primer Nivel</title>
 	<script>
@@ -25,17 +36,15 @@
 			x += 25;
 			document.getElementById("imagen").style.right = String(x)+"px";
 			break;
-		  
-		  default:
-			document.write(direccion.keyCode);
-			break;
+		  			
+		
 		}
 		
 	  }
 	  
 	</script>
   </head>
-  <! body onkeyup>
+  
   <body onkeydown="moverImagen(event);">
 	<div id="juego">
 	<img src="fondo2.jpg" class = "fondo"/>
