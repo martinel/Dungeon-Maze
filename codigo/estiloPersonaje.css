@@ -21,22 +21,12 @@ body{
 	padding-right:250px;
 	float:left;
 	color:white;
-	visibility:hidden;
+	font-size:10px;
 }
-/*
-.t1{
-	background-color:orange;
-	visibility:hidden;
-}
-.t2{
-	background-color:red;
-	visibility:hidden;
-}
-.t3{
-	background-color:yellow;
-	visibility:hidden;
-}*/
-.focus{
-	visibility:visible;
+
+form{
+position:relative;
+float:right;
+color:black;
 }
 
