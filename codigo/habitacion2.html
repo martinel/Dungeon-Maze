@@ -7,14 +7,13 @@
 	<script src="miScript.js" type="text/javascript"></script>
 	<title>Segundo Nivel</title>
 	<script>
-	   pasarHabitacion();
-	  function moverImagen(direccion){
+	 	  function moverImagen(direccion){
 	 
 		var guerrero = document.getElementById("guerrero");
 		var y = getDimensions(guerrero).y -22;
 		var x = getDimensions(guerrero).x -22;
-		var llavex = getDimensions(llave).x -22;
-		var llavey = getDimensions(llave).y -22;
+		var llavex = getDimensions(llave2).x -22;
+		var llavey = getDimensions(llave2).y -22;
 		
 		switch(direccion.keyCode){
 		  case 38:
@@ -49,7 +48,7 @@
 			}break;
 		}
 		if(x==llavex && y==llavey){
-			location.href='seleccion.html';
+			location.href='habitacion2.html';
 		}	  
 	  }
 	  function moverEnemigos(){
@@ -94,7 +93,7 @@
 	<img src="orco.jpg" class="imagen" id="orco1" />
 	<img src="orco.jpg" class="imagen" id="orco2" />
 	<img src="orco.jpg" class="imagen" id="orco3" />
-	<img src="llave.gif" class="imagen" id="llave" />
+	<img src="llave.gif" class="imagen" id="llave2" />
 	<img src="oro.jpg" class="imagen" id="oro1" />
 	<img src="oro.jpg" class="imagen" id="oro2" />
 	<img src="oro.jpg" class="imagen" id="oro3" />

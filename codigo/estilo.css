@@ -10,12 +10,15 @@ left:50px;
 }
 
 #llave{
-
 top:400px;
 left:725px;
 position:absolute;
+}
 
-
+#llave2{
+top:100px;
+left:625px;
+position:absolute;
 }
 
 #oro1{
