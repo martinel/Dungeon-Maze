@@ -72,7 +72,7 @@ function aleatorio(inferior,superior){
 		return Math.round(parseInt(inferior) + aleat)
 }
 	
-function movimientoDeEnemigo(enemigo){
+function moverEnemigo(enemigo){
 var random = aleatorio(1,4);
 
 switch(random){
