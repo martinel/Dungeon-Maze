@@ -2,25 +2,151 @@ body{
 	
 }
 
-#imagen{
-	
-	position:relative;
+
+#guerrero{
+position:absolute;
+top:50px;
+left:50px;
+}
+
+#llave{
+
+top:400px;
+left:725px;
+position:absolute;
+
+
+}
+
+#oro1{
+left:275px;
+top:400px;
+position:absolute;
+}
+
+#oro2{
+left:250px;
+top:25px;
+position:absolute;
+}
+
+#oro3{
+left:575px;
+top:50px;
+position:absolute;
+}
+
+#oro4{
+left:475px;
+top:250px;
+position:absolute;
+}
+
+#goblin2{
+position:absolute;
+left:200;
+top:350;
+}
+
+
+#goblin1{
+position:absolute;
+left:225px;
+top:150px;
+
+}
+
+#goblin3{
+position:absolute;
+left:575px;
+top:100px;
+}
+
+#goblin4{
+position:absolute;
+left:550px;
+top:400px;
+
+}
+
+#orco3{
+	position:absolute;
+	left:125px;
+	top:250px;
+}
+
+#orco2{
+	position:absolute;
+	top:75px;
+	left:375px;
+}
+
+#orco1{
+	position:absolute;
+	top:250px;
+	left:625px;
+}
+
+.imagen{
 	height:25px;
 	width:25px;
 	position:relative;
 }
 
-.fondo{
-	height: 500px;
-	width: 800px;
+#contorno{
+	height:500px;
+	width: 806px;
 	position:absolute;
+	background-image:url('ladrillo.gif');
 	
+	
+}
+	
+#juego{
+	height:450px;
+	width:776px;
+	top:16px;
+	left:16px;
+	position:relative;
+	background-image:url('fondo2.jpg');
 }
 
 #stats{
-	top:475px;
-	width:800px;
+	top:480px;
+	width:806px;
 	height: 100px;
 	background-color:blue;
 	position:relative;
+}
+
+.texto > em, .texto > img
+{
+   display:none;
+} 
+
+.texto
+{
+   color:blue;
+   position:relative;
+}
+
+.texto > em, .texto > img
+{
+   display:none;
+   position:absolute;
+   top:-1em;
+   left:2em;
+   /* Un poco de colorido */
+   background:yellow;
+   border:1px solid black;
+   width:100px;
+}
+
+.texto:hover > em, .texto:hover > img
+{
+   display:block;
+}
+
+#reglas li{
+	list-style:none;
 }

@@ -1,18 +1,8 @@
 <html>
 
 	 <head>  
-	 
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-
-	<link rel="stylesheet" type="text/css" href="ejemplo.css" />
-
-	<script type="text/javascript" src="ejemplo.js">	
-
-
-	</script>
-
-		
-	 <link href="estilo.css" media="screen" type="text/css" rel="stylesheet">
+	
+	<link href="estilo.css" media="screen" type="text/css" rel="stylesheet">
 	<title>Primer Nivel</title>
 	<script>
 	  var x = 0;
@@ -20,22 +10,26 @@
 	  function moverImagen(direccion){
 		switch(direccion.keyCode){
 		  case 38:
+			if(y>16){
 			y -= 25;
-			document.getElementById("imagen").style.top = String(y)+"px";
-			break;
-		  case 39:
+			document.getElementById("guerrero").style.top = String(y)+"px";
+			}break;
+		  case 37:
+			if(x>16){
 			x -= 25;
-			document.getElementById("imagen").style.right = String(x)+"px";
+			}document.getElementById("guerrero").style.left = String(x)+"px";
 			break;
 		  case 40:
+			if(y<409){
 			y += 25;
-			document.getElementById("imagen").style.top = String(y)+"px";
-			break;
+			document.getElementById("guerrero").style.top = String(y)+"px";
+			}break;
 		  
-		  case 37:
+		  case 39:
+			if(x<730){
 			x += 25;
-			document.getElementById("imagen").style.right = String(x)+"px";
-			break;
+			document.getElementById("guerrero").style.left = String(x)+"px";
+			}break;
 		  			
 		
 		}
@@ -46,9 +40,23 @@
   </head>
   
   <body onkeydown="moverImagen(event);">
+	<div id="contorno">
+	
 	<div id="juego">
-	<img src="fondo2.jpg" class = "fondo"/>
-	<img src="sprite-guerrero.jpg" id="imagen" alt="guerrero" />
+	<img src="sprite-guerrero.jpg" class="imagen" id="guerrero" />
+	<img src="goblin.gif" class="imagen" id="goblin1" />
+	<img src="goblin.gif" class="imagen" id="goblin2" />
+	<img src="goblin.gif" class="imagen" id="goblin3" />
+	<img src="goblin.gif" class="imagen" id="goblin4" />
+	<img src="orco.jpg" class="imagen" id="orco1" />
+	<img src="orco.jpg" class="imagen" id="orco2" />
+	<img src="orco.jpg" class="imagen" id="orco3" />
+	<img src="llave.gif" class="imagen" id="llave" />
+	<img src="oro.jpg" class="imagen" id="oro1" />
+	<img src="oro.jpg" class="imagen" id="oro2" />
+	<img src="oro.jpg" class="imagen" id="oro3" />
+	<img src="oro.jpg" class="imagen" id="oro4" />
+	</div>
 	</div>
 	<div id="stats">
 	
