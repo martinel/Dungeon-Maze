@@ -7,85 +7,78 @@
 	<script src="miScript.js" type="text/javascript"></script>
 	<title>Primer Nivel</title>
 	<script>
-		
-	  
+	   pasarHabitacion();
 	  function moverImagen(direccion){
+	 
 		var guerrero = document.getElementById("guerrero");
 		var y = getDimensions(guerrero).y -22;
 		var x = getDimensions(guerrero).x -22;
+		var llavex = getDimensions(llave).x -22;
+		var llavey = getDimensions(llave).y -22;
 		
 		switch(direccion.keyCode){
 		  case 38:
-			
 			if(y>16){
 			 y = y - 25 ;
+			
 			guerrero.style.top = String(y)+"px";
-			moverEnemigos();
+			moverEnemigos();			
 			}break;
 		  case 37:
 			if(x>16){
 			 x -= 25;
+			
 			guerrero.style.left = String(x)+"px";
 			 moverEnemigos();
-			}break;
+		}break;
 		  case 40:
 			if(y<409){
 			 y += 25;
+			
 			guerrero.style.top = String(y)+"px";
-			 moverEnemigos();
+			 moverEnemigos();			  
 			}break;
 		  
 		  case 39:
 			
 			if(x<730){
 			x += 25;
+			
 			guerrero.style.left = String(x)+"px";
 			 moverEnemigos();
 			}break;
-		  			
-		
 		}
-		
+		if(x==llavex && y==llavey){
+			location.href='seleccion.html';
+		}	  
 	  }
-	  
-	  
-	  
-	  
 	  function moverEnemigos(){
-
-
-	var i;	
-	for(i=0;i<=7;i++){
-		if(i=1){
-			moverEnemigo(document.getElementById("orco1"));
-		}
-		if(i=2){
-			moverEnemigo(document.getElementById("orco2"));
-		}
-		if(i=3){
-			moverEnemigo(document.getElementById("orco3"));
-		}
-		if(i=4){
-			moverEnemigo(document.getElementById("goblin1"));
-		}
-		if(i=5){
-			moverEnemigo(document.getElementById("goblin2"));
-		}
-		if(i=6){
-			moverEnemigo(document.getElementById("goblin3"));
-		}
-		if(i=7){
-			moverEnemigo(document.getElementById("goblin4"));
-		}
-		
-	}
-}
-
-
-	 
-	
-	  
-	  
+			var i;	
+			for(i=0;i<=7;i++){
+				if(i=1){
+					moverEnemigo(document.getElementById("orco1"));
+				}
+				if(i=2){
+					moverEnemigo(document.getElementById("orco2"));
+				}
+				if(i=3){
+					moverEnemigo(document.getElementById("orco3"));
+				}
+				if(i=4){
+					moverEnemigo(document.getElementById("goblin1"));
+				}
+				if(i=5){
+					moverEnemigo(document.getElementById("goblin2"));
+				}
+				if(i=6){
+					moverEnemigo(document.getElementById("goblin3"));
+				}
+				if(i=7){
+					moverEnemigo(document.getElementById("goblin4"));
+				}
+			
+				}
+	  }	
 	</script>
   </head>
   
