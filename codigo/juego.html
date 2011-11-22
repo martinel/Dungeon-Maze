@@ -22,7 +22,7 @@
 		var goldtrsy = getDimensions(oro3).y -22;
 		var goldfox = getDimensions(oro4).x -22;
 		var goldfoy = getDimensions(oro4).y -22;
-		 var gue={
+		var gue={
 		  ataque:10,
 		  defensa:14,
 		  damage:15,
@@ -62,29 +62,32 @@
 			}break;
 		}
 		if(x==llavex && y==llavey){
-			alert("¡Pasaste al siguiente nivel!");
 			location.href='habitacion2.html';
 		}
 		else{
 			if(x==goldonex && y==goldoney){
 				gue.ataque= gue.ataque+5;
+				document.getElementById("oro1").style.visibility='hidden';
 				document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 			}
 			else{
 				if(x==goldtwox && y==goldtwoy){
 					gue.ataque+=10;
 					gue.defensa+=20;
+					document.getElementById("oro2").style.visibility='hidden';
 					document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 				}
 				else{
 					if(x==goldtrsx && y==goldtrsy){
 						gue.vida+=10;
+						document.getElementById("oro3").style.visibility='hidden';
 						document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 					}
 					else{
 						if(x==goldfox && y==goldfoy){
 							gue.damage+=7;
 							gue.defensa+=11;
+							document.getElementById("oro4").style.visibility='hidden';
 							document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 						}
 					}
@@ -123,7 +126,6 @@
 	 
 	  function inicio(){	
 			document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
-	
 	  }
 	</script>
   </head>
@@ -149,8 +151,6 @@
 	</div>
 	</div>
 	<div  id="stats">
-	
-	
 	</div>
   </body>
 
