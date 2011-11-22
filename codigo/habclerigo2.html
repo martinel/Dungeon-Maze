@@ -1,25 +1,24 @@
 <html>
-
 	 <head>  
 	
 	<link href="estilo.css" media="screen" type="text/css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js" type="text/javascript"></script>
 	<script src="miScript.js" type="text/javascript"></script>
-	<title>Primer Nivel</title>
+	<title>Segundo Nivel</title>
 	<script>		
 	  function moverImagen(direccion){
 		
 		var clerigo = document.getElementById("clerigo");
 		var y = getDimensions(clerigo).y -22;
 		var x = getDimensions(clerigo).x -22;
-		var llavex = getDimensions(llave).x -22;
-		var llavey = getDimensions(llave).y -22;
-		var goldonex = getDimensions(oro1).x -22;
-		var goldoney = getDimensions(oro1).y -22;
-		var goldtwox = getDimensions(oro2).x -22;
-		var goldtwoy = getDimensions(oro2).y -22;
-		var goldtrsx = getDimensions(oro3).x -22;
-		var goldtrsy = getDimensions(oro3).y -22;
+		var llavex = getDimensions(llave3).x -22;
+		var llavey = getDimensions(llave3).y -22;
+		var goldonex = getDimensions(oroun).x -22;
+		var goldoney = getDimensions(oroun).y -22;
+		var goldtwox = getDimensions(orozwei).x -22;
+		var goldtwoy = getDimensions(orozwei).y -22;
+		var goldtrsx = getDimensions(orotrois).x -22;
+		var goldtrsy = getDimensions(orotrois).y -22;
 		var goldfox = getDimensions(oro4).x -22;
 		var goldfoy = getDimensions(oro4).y -22;
 		var gue={
@@ -67,20 +66,20 @@
 		else{
 			if(x==goldonex && y==goldoney){
 				gue.ataque= gue.ataque+5;
-				document.getElementById("oro1").style.visibility='hidden';
+				document.getElementById("oroun").style.visibility='hidden';
 				document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 			}
 			else{
 				if(x==goldtwox && y==goldtwoy){
 					gue.ataque+=10;
 					gue.defensa+=20;
-					document.getElementById("oro2").style.visibility='hidden';
+					document.getElementById("orozwei").style.visibility='hidden';
 					document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 				}
 				else{
 					if(x==goldtrsx && y==goldtrsy){
 						gue.vida+=10;
-						document.getElementById("oro3").style.visibility='hidden';
+						document.getElementById("orotrois").style.visibility='hidden';
 						document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 					}
 					else{
@@ -131,10 +130,10 @@
   </head>
   
   <body onload="inicio();" onkeydown="moverImagen(event);">
-	<embed src="musica.mp3" hidden="true" type="audio/mpeg" autostart="true"></embed>
+	<embed src="nivel2.mp3" hidden="true" type="audio/mpeg" autostart="true"></embed>
 	<div  id="contorno">
 	
-	<div id="juego">
+	<div id="juego3">
 	<div id="clerigo"><img src="sprite-clerigo.jpg" class="imagen" /></div>
 	<img src="goblin.gif" class="imagen" id="goblin1" />
 	<img src="goblin.gif" class="imagen" id="goblin2" />
@@ -143,10 +142,10 @@
 	<img src="orco.jpg" class="imagen" id="orco1" />
 	<img src="orco.jpg" class="imagen" id="orco2" />
 	<img src="orco.jpg" class="imagen" id="orco3" />
-	<img src="llave.gif" class="imagen" id="llave" />
-	<img src="oro.jpg" class="imagen" id="oro1" />
-	<img src="oro.jpg" class="imagen" id="oro2" />
-	<img src="oro.jpg" class="imagen" id="oro3" />
+	<img src="llave.gif" class="imagen" id="llave3" />
+	<img src="oro.jpg" class="imagen" id="oroun" />
+	<img src="oro.jpg" class="imagen" id="orozwei" />
+	<img src="oro.jpg" class="imagen" id="orotrois" />
 	<img src="oro.jpg" class="imagen" id="oro4" />
 	</div>
 	</div>

@@ -2,7 +2,7 @@
 
 	 <head>  
 	
-	<link href="estilomapa3.css" media="screen" type="text/css" rel="stylesheet">
+	<link href="estilo.css" media="screen" type="text/css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js" type="text/javascript"></script>
 	<script src="miScript.js" type="text/javascript"></script>
 	<title>Tercer Nivel</title>
@@ -12,16 +12,16 @@
 		var guerrero = document.getElementById("guerrero");
 		var y = getDimensions(guerrero).y -22;
 		var x = getDimensions(guerrero).x -22;
-		var llavex = getDimensions(llave2).x -22;
-		var llavey = getDimensions(llave2).y -22;
-		var goldonex = getDimensions(oroun).x -22;
-		var goldoney = getDimensions(oroun).y -22;
-		var goldtwox = getDimensions(orodoix).x -22;
-		var goldtwoy = getDimensions(orodoix).y -22;
-		var goldtrsx = getDimensions(orotrois).x -22;
-		var goldtrsy = getDimensions(orotrois).y -22;
-		var goldfox = getDimensions(oroquatre).x -22;
-		var goldfoy = getDimensions(oroquatre).y -22;
+		var llavex = getDimensions(llave3).x -22;
+		var llavey = getDimensions(llave3).y -22;
+		var goldonex = getDimensions(oroein).x -22;
+		var goldoney = getDimensions(oroein).y -22;
+		var goldtwox = getDimensions(orozwei).x -22;
+		var goldtwoy = getDimensions(orozwei).y -22;
+		var goldtrsx = getDimensions(orodrei).x -22;
+		var goldtrsy = getDimensions(orodrei).y -22;
+		var goldfox = getDimensions(orovier).x -22;
+		var goldfoy = getDimensions(orovier).y -22;
 		var gue={
 		  ataque:10,
 		  defensa:14,
@@ -68,27 +68,27 @@
 		else{
 			if(x==goldonex && y==goldoney){
 				gue.ataque= gue.ataque+5;
-				document.getElementById("oroun").style.visibility='hidden';
+				document.getElementById("oroein").style.visibility='hidden';
 				document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 			}
 			else{
 				if(x==goldtwox && y==goldtwoy){
 					gue.ataque+=10;
 					gue.defensa+=20;
-					document.getElementById("orodoix").style.visibility='hidden';
+					document.getElementById("orozwei").style.visibility='hidden';
 					document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 				}
 				else{
 					if(x==goldtrsx && y==goldtrsy){
 						gue.vida+=10;
-						document.getElementById("orotrois").style.visibility='hidden';
+						document.getElementById("orodrei").style.visibility='hidden';
 						document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 					}
 					else{
 						if(x==goldfox && y==goldfoy){
 							gue.damage+=7;
 							gue.defensa+=11;
-							document.getElementById("oroquatre").style.visibility='hidden';
+							document.getElementById("orovier").style.visibility='hidden';
 							document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 						}
 					}
@@ -131,7 +131,7 @@
   </head>
   
   <body onload="inicio();" onkeydown="moverImagen(event);">
-	<embed src="musica.mp3" hidden="true" type="audio/mpeg" autostart="true"></embed>
+	<embed src="nivel3.mp3" hidden="true" type="audio/mpeg" autostart="true"></embed>
 	<div id="contorno">
 	
 	<div id="juego3">
@@ -143,11 +143,11 @@
 	<img src="orco.jpg" class="imagen" id="orco1" />
 	<img src="orco.jpg" class="imagen" id="orco2" />
 	<img src="orco.jpg" class="imagen" id="orco3" />
-	<img src="llave.gif" class="imagen" id="llave2" />
-	<img src="oro.jpg" class="imagen" id="oroun" />
-	<img src="oro.jpg" class="imagen" id="orodoix" />
-	<img src="oro.jpg" class="imagen" id="orotrois" />
-	<img src="oro.jpg" class="imagen" id="oroquatre" />
+	<img src="llave.gif" class="imagen" id="llave3" />
+	<img src="oro.jpg" class="imagen" id="oroein" />
+	<img src="oro.jpg" class="imagen" id="orozwei" />
+	<img src="oro.jpg" class="imagen" id="orodrei" />
+	<img src="oro.jpg" class="imagen" id="orovier" />
 	</div>
 	</div>
 	<div id="stats">
