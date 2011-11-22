@@ -5,51 +5,50 @@
 	<link href="estilo.css" media="screen" type="text/css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js" type="text/javascript"></script>
 	<script src="miScript.js" type="text/javascript"></script>
-	<title>Segundo Nivel</title>
-	<script>
-	 	function moverImagen(direccion){
-	 
-		var guerrero = document.getElementById("guerrero");
-		var y = getDimensions(guerrero).y -22;
-		var x = getDimensions(guerrero).x -22;
-		var llavex = getDimensions(llave2).x -22;
-		var llavey = getDimensions(llave2).y -22;
-		var goldonex = getDimensions(oroun).x -22;
-		var goldoney = getDimensions(oroun).y -22;
-		var goldtwox = getDimensions(orodoix).x -22;
-		var goldtwoy = getDimensions(orodoix).y -22;
-		var goldtrsx = getDimensions(orotrois).x -22;
-		var goldtrsy = getDimensions(orotrois).y -22;
-		var goldfox = getDimensions(oroquatre).x -22;
-		var goldfoy = getDimensions(oroquatre).y -22;
+	<title>Primer Nivel</title>
+	<script>		
+	  function moverImagen(direccion){
+		
+		var clerigo = document.getElementById("clerigo");
+		var y = getDimensions(clerigo).y -22;
+		var x = getDimensions(clerigo).x -22;
+		var llavex = getDimensions(llave).x -22;
+		var llavey = getDimensions(llave).y -22;
+		var goldonex = getDimensions(oro1).x -22;
+		var goldoney = getDimensions(oro1).y -22;
+		var goldtwox = getDimensions(oro2).x -22;
+		var goldtwoy = getDimensions(oro2).y -22;
+		var goldtrsx = getDimensions(oro3).x -22;
+		var goldtrsy = getDimensions(oro3).y -22;
+		var goldfox = getDimensions(oro4).x -22;
+		var goldfoy = getDimensions(oro4).y -22;
 		var gue={
-		  ataque:10,
-		  defensa:14,
-		  damage:15,
-		  vida:100,
+		  ataque:5,
+		  defensa:16,
+		  damage:5,
+		  vida:150,
 		  }
 			document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida; 	
-		
 		switch(direccion.keyCode){
 		  case 38:
 			if(y>16){
 			 y = y - 25 ;
 			
-			guerrero.style.top = String(y)+"px";
+			clerigo.style.top = String(y)+"px";
 			moverEnemigos();			
 			}break;
 		  case 37:
 			if(x>16){
 			 x -= 25;
 			
-			guerrero.style.left = String(x)+"px";
+			clerigo.style.left = String(x)+"px";
 			 moverEnemigos();
 		}break;
 		  case 40:
 			if(y<409){
 			 y += 25;
 			
-			guerrero.style.top = String(y)+"px";
+			clerigo.style.top = String(y)+"px";
 			 moverEnemigos();			  
 			}break;
 		  
@@ -58,37 +57,37 @@
 			if(x<730){
 			x += 25;
 			
-			guerrero.style.left = String(x)+"px";
+			clerigo.style.left = String(x)+"px";
 			 moverEnemigos();
 			}break;
 		}
 		if(x==llavex && y==llavey){
-			location.href='habitacion3.html';
+			location.href='habclerigo3.html';
 		}
 		else{
 			if(x==goldonex && y==goldoney){
 				gue.ataque= gue.ataque+5;
-				document.getElementById("oroun").style.visibility='hidden';
+				document.getElementById("oro1").style.visibility='hidden';
 				document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 			}
 			else{
 				if(x==goldtwox && y==goldtwoy){
 					gue.ataque+=10;
 					gue.defensa+=20;
-					document.getElementById("orodoix").style.visibility='hidden';
+					document.getElementById("oro2").style.visibility='hidden';
 					document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 				}
 				else{
 					if(x==goldtrsx && y==goldtrsy){
 						gue.vida+=10;
-						document.getElementById("orotrois").style.visibility='hidden';
+						document.getElementById("oro3").style.visibility='hidden';
 						document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 					}
 					else{
 						if(x==goldfox && y==goldfoy){
 							gue.damage+=7;
 							gue.defensa+=11;
-							document.getElementById("oroquatre").style.visibility='hidden';
+							document.getElementById("oro4").style.visibility='hidden';
 							document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 						}
 					}
@@ -123,8 +122,9 @@
 				}
 			
 				}
-	   }
-		 function inicio(){	
+	  }
+	 
+	  function inicio(){	
 			document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 	  }
 	</script>
@@ -132,10 +132,10 @@
   
   <body onload="inicio();" onkeydown="moverImagen(event);">
 	<embed src="musica.mp3" hidden="true" type="audio/mpeg" autostart="true"></embed>
-	<div id="contorno">
+	<div  id="contorno">
 	
-	<div id="juego2">
-	<div id="guerrero"><img src="sprite-guerrero.jpg" class="imagen" /></div>
+	<div id="juego">
+	<div id="clerigo"><img src="sprite-clerigo.jpg" class="imagen" /></div>
 	<img src="goblin.gif" class="imagen" id="goblin1" />
 	<img src="goblin.gif" class="imagen" id="goblin2" />
 	<img src="goblin.gif" class="imagen" id="goblin3" />
@@ -143,16 +143,14 @@
 	<img src="orco.jpg" class="imagen" id="orco1" />
 	<img src="orco.jpg" class="imagen" id="orco2" />
 	<img src="orco.jpg" class="imagen" id="orco3" />
-	<img src="llave.gif" class="imagen" id="llave2" />
-	<img src="oro.jpg" class="imagen" id="oroun" />
-	<img src="oro.jpg" class="imagen" id="orodoix" />
-	<img src="oro.jpg" class="imagen" id="orotrois" />
-	<img src="oro.jpg" class="imagen" id="oroquatre" />
+	<img src="llave.gif" class="imagen" id="llave" />
+	<img src="oro.jpg" class="imagen" id="oro1" />
+	<img src="oro.jpg" class="imagen" id="oro2" />
+	<img src="oro.jpg" class="imagen" id="oro3" />
+	<img src="oro.jpg" class="imagen" id="oro4" />
 	</div>
 	</div>
-	<div id="stats">
-	
-	
+	<div  id="stats">
 	</div>
   </body>
 

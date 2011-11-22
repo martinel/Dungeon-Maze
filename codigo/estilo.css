@@ -3,6 +3,16 @@ position:absolute;
 top:50px;
 left:50px;
 }
+#clerigo{
+	position:absolute;
+top:50px;
+left:50px;
+}
+#valkiria{
+		position:absolute;
+top:50px;
+left:50px;
+}
 
 #llave{
 top:400px;
@@ -144,7 +154,14 @@ top:400px;
 	position:relative;
 	background-image:url('fondo.jpg');
 }
-
+#juego3{
+	height:450px;
+	width:776px;
+	top:16px;
+	left:16px;
+	position:relative;
+	background-image:url('fondo3.jpg');
+}
 #stats{
 	top:480px;
 	width:806px;

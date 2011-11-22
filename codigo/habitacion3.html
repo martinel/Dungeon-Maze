@@ -5,9 +5,9 @@
 	<link href="estilo.css" media="screen" type="text/css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js" type="text/javascript"></script>
 	<script src="miScript.js" type="text/javascript"></script>
-	<title>Segundo Nivel</title>
+	<title>Tercer Nivel</title>
 	<script>
-	 	function moverImagen(direccion){
+	 	  function moverImagen(direccion){
 	 
 		var guerrero = document.getElementById("guerrero");
 		var y = getDimensions(guerrero).y -22;
@@ -63,7 +63,7 @@
 			}break;
 		}
 		if(x==llavex && y==llavey){
-			location.href='habitacion3.html';
+			alert('ganaste Dungeon-Maze');
 		}
 		else{
 			if(x==goldonex && y==goldoney){
@@ -134,7 +134,7 @@
 	<embed src="musica.mp3" hidden="true" type="audio/mpeg" autostart="true"></embed>
 	<div id="contorno">
 	
-	<div id="juego2">
+	<div id="juego3">
 	<div id="guerrero"><img src="sprite-guerrero.jpg" class="imagen" /></div>
 	<img src="goblin.gif" class="imagen" id="goblin1" />
 	<img src="goblin.gif" class="imagen" id="goblin2" />
