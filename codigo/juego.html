@@ -6,14 +6,21 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js" type="text/javascript"></script>
 	<script src="miScript.js" type="text/javascript"></script>
 	<title>Primer Nivel</title>
-	<script>
-	  function moverImagen(direccion){
-	 
+	<script>		
+	  function moverImagen(direccion){	 
 		var guerrero = document.getElementById("guerrero");
 		var y = getDimensions(guerrero).y -22;
 		var x = getDimensions(guerrero).x -22;
 		var llavex = getDimensions(llave).x -22;
 		var llavey = getDimensions(llave).y -22;
+		var goldonex = getDimensions(oro1).x -22;
+		var goldoney = getDimensions(oro1).y -22;
+		var goldtwox = getDimensions(oro2).x -22;
+		var goldtwoy = getDimensions(oro2).y -22;
+		var goldtrsx = getDimensions(oro3).x -22;
+		var goldtrsy = getDimensions(oro3).y -22;
+		var goldfox = getDimensions(oro4).x -22;
+		var goldfoy = getDimensions(oro4).y -22;
 		
 		switch(direccion.keyCode){
 		  case 38:
@@ -48,9 +55,30 @@
 			}break;
 		}
 		if(x==llavex && y==llavey){
-			alert("¡Pasaste al siguiente nivel!")
+			alert("¡Pasaste al siguiente nivel!");
 			location.href='habitacion2.html';
-		}	  
+		}
+		else{
+			if(x==goldonex && y==goldoney){
+				window.alert("aumenta ataque");
+			}
+			else{
+				if(x==goldtwox && y==goldtwoy){
+					window.alert("aumenta ataque + defensa");
+				}
+				else{
+					if(x==goldtrsx && y==goldtrsy){
+					window.alert("aumenta vida");
+					}
+					else{
+						if(x==goldfox && y==goldfoy){
+						window.alert("aumenta daño y defensa");
+						}
+					}
+					
+				}	
+			}	
+		}		
 	  }
 	  function moverEnemigos(){
 			var i;	
@@ -78,7 +106,8 @@
 				}
 			
 				}
-	  }	
+	  }
+		
 	</script>
   </head>
   
