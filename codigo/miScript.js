@@ -15,6 +15,26 @@ $('document').ready(function(){
 			break;
 		}	
 	});
+	
+	$('#pruebaimg').click(function(){
+	var valorimagen = $('input[name=select]:checked').val()
+
+		if(valorimagen == 'guerrero'){
+			
+			
+			$('#juego').attr("href","juego.html")
+			
+			
+		}
+		if(valorimagen == 'clerigo'){
+			
+			$('#juego').attr("href","juegoclerigo.html")
+			
+		}
+		if(valorimagen == 'valkiria'){
+			$('#juego').attr("href","juegovalkiria.html")
+		}
+	});
 });
 
 	var orco = $('#orco1');
