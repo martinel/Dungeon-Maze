@@ -7,7 +7,8 @@
 	<script src="miScript.js" type="text/javascript"></script>
 	<title>Primer Nivel</title>
 	<script>		
-	  function moverImagen(direccion){	 
+	  function moverImagen(direccion){
+		
 		var guerrero = document.getElementById("guerrero");
 		var y = getDimensions(guerrero).y -22;
 		var x = getDimensions(guerrero).x -22;
@@ -21,7 +22,13 @@
 		var goldtrsy = getDimensions(oro3).y -22;
 		var goldfox = getDimensions(oro4).x -22;
 		var goldfoy = getDimensions(oro4).y -22;
-		
+		 var gue={
+		  ataque:10,
+		  defensa:14,
+		  damage:15,
+		  vida:100,
+		  }
+			document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida; 	
 		switch(direccion.keyCode){
 		  case 38:
 			if(y>16){
@@ -60,19 +67,25 @@
 		}
 		else{
 			if(x==goldonex && y==goldoney){
-				window.alert("aumenta ataque");
+				gue.ataque= gue.ataque+5;
+				document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 			}
 			else{
 				if(x==goldtwox && y==goldtwoy){
-					window.alert("aumenta ataque + defensa");
+					gue.ataque+=10;
+					gue.defensa+=20;
+					document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 				}
 				else{
 					if(x==goldtrsx && y==goldtrsy){
-					window.alert("aumenta vida");
+						gue.vida+=10;
+						document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 					}
 					else{
 						if(x==goldfox && y==goldfoy){
-						window.alert("aumenta daño y defensa");
+							gue.damage+=7;
+							gue.defensa+=11;
+							document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
 						}
 					}
 					
@@ -107,12 +120,17 @@
 			
 				}
 	  }
-		
+	 
+	  function inicio(){	
+			document.getElementById("stats").innerHTML="Ataque: "+gue.ataque+"<br>"+"Defensa: "+gue.defensa+"<br>"+"Damage: "+gue.damage+"<br>"+"Vida: "+gue.vida;
+	
+	  }
 	</script>
   </head>
   
-  <body onkeydown="moverImagen(event);">
-	<div id="contorno">
+  <body onload="inicio();" onkeydown="moverImagen(event);">
+	<embed src="mp3" hidden="true" type="audio/mpeg" autostart="true"></embed>
+	<div  id="contorno">
 	
 	<div id="juego">
 	<div id="guerrero"><img src="sprite-guerrero.jpg" class="imagen" /></div>
@@ -130,8 +148,8 @@
 	<img src="oro.jpg" class="imagen" id="oro4" />
 	</div>
 	</div>
-	<div id="stats">
-	<embed src="musica.mp3" hidden="true" type="audio/mpeg" autostart="true"></embed>
+	<div  id="stats">
+	
 	
 	</div>
   </body>
